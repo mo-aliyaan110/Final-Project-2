@@ -63,3 +63,5 @@ GET /restaurant?mealtype=5&city=3 200 454 - 3.716 ms
 GET /restaurant?mealtype=1&city=3 200 454 - 3.599 ms
 GET /restaurant?mealtype=1&city=1 200 3626 - 5.035 ms
 GET /restaurant?mealtype=1&cuisine=4 200 1414 - 2.212 ms
+GET /restaurant?mealtype=1&cuisine=4 304 - - 11.579 ms
+GET /restaurant?mealtype=1&cuisine=4 304 - - 12.694 ms

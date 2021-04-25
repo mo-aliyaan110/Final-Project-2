@@ -56,6 +56,10 @@ app.get('/restaurant', (req,res) =>{
     else if(req.query.cuisine){
         query = {'Cuisine.cuisine':req.query.cuisine}
     }
+    // restaurant on basis of city and mealtype
+    else if (req.query.city && req.query.mealtype){
+        query = {city:req.query.city, 'type.mealtype':req.query.mealtype}
+    }
 
     database.collection('restaurant').find(query).toArray((err, result) =>{
         if(err) throw err;
@@ -100,20 +104,22 @@ app.get('/cuisine', (req,res) =>{
 
 // listing API here the mealtype will be default and on basis of City and cuisine you get the restaurant
 
-app.get('/restaurant', (req,res)=>{
-    var query = "http://localhost:7500/restaurant?mealtype";
-    if(req.query.mealtype){
-        query = {'type.mealtype':req.query.mealtype}
+app.get('/restaurantlist/:mealtype', (req,res)=>{
+    var query = {'type.mealtype':req.params.mealtype}
+    
+    // restaurant on basis of city
+    if(req.query.city){
+        query = {'type.mealtype':req.params.mealtype, 'city':req.query.city}
     }
-    else if (req.query.city){
-        query = {city:req.query.city}
-    }
+    // restaurant on basis of cuisine
     else if (req.query.cuisine){
-        query = {'Cuisine.cuisine':req.query.cuisine}
+        query = {'type.mealtype':req.params.mealtype, 'Cuisine.cuisine':req.query.cuisine}
     }
-    // else if (req.query.city && req.query.cuisine){
-    //     query = {city:req.query.city} && {'Cuisine.cuisine':req.query.cuisine}
+    // restaurant on basis of cost
+    // else if (req.query.cost){
+    //     query = {'type.mealtype':req.params.mealtype, 'cost':{$gt:parseInt(req.query.lcost), $lt:parseInt(req.query.hcost)}
     // }
+   
 
     database.collection('restaurant').find(query).toArray((err,result)=>{
         if(err) throw err
