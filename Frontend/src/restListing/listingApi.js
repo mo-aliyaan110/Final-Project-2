@@ -13,8 +13,8 @@ class Listing extends Component{
         }
     }
     render(){
-        console.log(this.props.match.params.id)
-        console.log(this.state.listmeal)
+        
+        
         return(
             <React.Fragment>
                 <div className='row'>

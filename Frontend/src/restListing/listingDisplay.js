@@ -16,7 +16,7 @@ const ListingDisp = (props) =>{
                          
                         <div className='col-md-9'>
                             <div className='rest_name'>
-                                <Link to={`/rest/${item._id}`}>{item.name}</Link>
+                                <Link className='item_namestyle' to={`/rest/${item._id}`}>{item.name}</Link>
                                 <div className="city_name"> {item.city_name} </div>
                                 <div className="address-text">{item.locality} </div>
                                 <div className="address-text">{item.address} </div>
