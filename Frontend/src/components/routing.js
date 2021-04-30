@@ -4,6 +4,8 @@ import Header from './header';
 import Home from '../home/home'
 import Listing from '../restListing/listingApi'
 import RestDetails from '../restDetails/restDetailsApi'
+import Forms from '../Orders/forms';
+import Orders from '../Orders/ordersApi';
 
 const Routing = () =>{
     return(
@@ -12,6 +14,8 @@ const Routing = () =>{
             <Route exact path='/' component={Home}/>
             <Route exact path='/list/:id' component={Listing}/>
             <Route exact path='/rest/:id' component={RestDetails}/>
+            <Route exact path='/orders/:id' component={Forms}/>
+            <Route exact path='/vieworder' component={Orders}/>
             
         </BrowserRouter>
         

@@ -28,8 +28,7 @@ class RestDetails extends Component{
     }
     render(){
         var {rest} = this.state;
-        console.log(this.props.match.params.id)
-        console.log(this.state.rest)
+       
         return(
             <React.Fragment>
                 <div className='container all-fonts'>

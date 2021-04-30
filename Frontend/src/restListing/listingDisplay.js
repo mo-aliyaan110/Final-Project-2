@@ -5,6 +5,7 @@ import './listing.css';
 const ListingDisp = (props) =>{
     const renderList = ({listdata})=>{
         if(listdata){
+            if(listdata.length>0){
             return listdata.map((item) =>{
                 return(
                     <div className='Item' id={item._id}>
@@ -42,6 +43,21 @@ const ListingDisp = (props) =>{
                 </div>
                 )
             })
+        }
+        else{
+            return(
+                <div className="No-Data">
+                    <h2 className='No-Data-text'> No Data Present </h2>
+                </div>
+            )
+        }
+        }
+        else{
+            return(
+            <div className="fidget-spinner">
+                <img  src='/img/Fidget-spinner.gif' alt='waiting'></img>
+            </div>
+            )
         }
     }
    

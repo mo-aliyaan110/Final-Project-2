@@ -31,20 +31,23 @@ class Search extends Component{
             this.setState({restaurant:data})
         })
     }
-
+    
+    
     renderRestaurant = (data) =>{
         if(data){
             return data.map((item) =>{
                 return(
-                    <option value={item.city}>
+                    <option value={item._id}>
                         {item.name} || {item.locality}
                     </option>
                 )
             })
         }
     }
+    restValue = (event) =>{
+        this.props.Rid(event.target.value)
+    }
 
-      
       
       
         

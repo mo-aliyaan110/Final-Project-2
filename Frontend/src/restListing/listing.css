@@ -287,3 +287,22 @@ Link.item_namestyle to:hover{
 Link:hover{
     text-decoration: none;
 }
+.fidget-spinner{
+    
+    
+    margin: 200px 300px;
+    
+    
+}
+.No-Data{
+    width: 50vw;
+    height: 50vh;    
+    margin: 200px 300px;
+    background-color: hsla(0.4, 45%, 76%, 0.3);
+    
+    
+}
+.No-Data-text{
+    font-size: 2em;
+    font-weight: lighter;
+}
