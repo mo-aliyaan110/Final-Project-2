@@ -1,0 +1,72 @@
+.imageContainer{
+    background:url('https://i.postimg.cc/76kStDSv/food-wallpaper.png');
+    border-style: solid;
+    border-color:white;
+    background-size:cover;
+}
+body{
+    margin-left:90px;
+    margin-right:90px;
+}
+
+#logo{
+    text-align: center;
+    color:red;
+    font-weight: bold;
+    font-size:90px;
+    background-color:white;
+    height:150px;
+    width:150px;
+    margin:auto;
+    border-radius: 50%;
+    margin-top:80px;
+    margin-bottom:60px
+}
+
+.hey{
+    text-align: center;
+    color:rgb(131, 50, 36);
+    font-size:25px;
+    font-weight: 600;
+}
+.locationSelector{
+    margin-top:20px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+.locationDropDown{
+    width:200px;
+    height:40px;
+    border-radius: 0%;
+    font-size:15px;
+    border:none;
+    color:gray
+}
+.restaurantsinput{
+    width:300px;
+    height:40px;
+    border-radius: 0%;
+    font-size:15px;
+    border:none;
+    margin-left:20px;
+    color:gray
+}
+
+.quickSearchContainer{
+    margin-left:110px;
+    margin-top:50px;
+}
+.logoText{
+    font-size: 0.9em;
+    font-weight: lighter;
+    color: hsla(115, 48%, 25%, 0.6);
+    font-family: cursive;
+    cursor: pointer;
+}
+.logoTextZ{
+    font-size: 0.6em;
+    font-weight: lighter;
+    color: hsla(115, 48%, 25%, 0.6);
+    font-family: cursive;
+    cursor: pointer;
+}
